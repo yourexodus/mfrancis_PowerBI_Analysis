@@ -1,107 +1,123 @@
-## 📊 Dashboard Overview
+# 📊 Power Query Data Cleaning Project
 
-This Power BI dashboard provides insights into:
+This is the full Markdown version of your Power Query transformation walkthrough with **correct `.jpg` image paths**.
 
-* **Sales performance** by region
-* Breakdown by **sales representative**
-* **Monthly sales trends**
-* Data quality improvements through **Power Query**
-* Year-to-date summaries
-
-The dataset originally contained missing values, no headers, unstructured date columns, and combined fields—requiring multiple stages of cleanup.
+All images follow this format:
+```
+images/filename.jpg
+```
 
 ---
 
-## 🧹 Data Cleaning & Transformation (Power Query)
+## 🗂️ Source Data Import
 
-Below is the exact transformation pipeline used in Power Query.
-
-### 1. Removed Null Rows
-
-Deleted the first two rows containing null values.
-Used: **Home → Reduce Rows → Remove Top Rows**.
-
-### 2. Promoted First Row to Headers
-
-Enabled meaningful column names.
-Used: **Home → Use First Row as Headers**.
-
-![Promoted Headers with Date and Sales Rep columns](myimages/AfterSelectedUseFirstRowAsHeaders.jpg)
-
-### 3. Split “Sales Rep” Into Region + Rep Name
-
-The Sales Rep field originally contained data in the format: **Region - Name**.
-The column was split by the delimiter **(-) and the resulting fields were renamed**:
-
-* Sales Rep.1 $\rightarrow$ **Region**
-* Sales Rep.2 $\rightarrow$ **Sales Rep Name**
-
-![Data after splitting Sales Rep and renaming columns Region and Sales Rep Name](myimages/DataAfterRename.jpg)
-![Applied Steps pane showing the Split Column by Delimiter and Renamed Columns steps](myimages/AppliedStepsAfterColumnRename.jpg)
-
-### 4. Unpivoted Monthly Date Columns
-
-Converted wide-format date columns (e.g., 1/31/2023, 2/28/2023, etc.) into a long-format table, transforming the columns as follows:
-
-* `Attribute` $\rightarrow$ **Date**
-* `Value` $\rightarrow$ **Number of Sales**
-
-![Applied Steps pane showing the Unpivoted Columns step](myimages/AppliedStepsAfterunpivot.jpg)
-![Data table showing Date Region Sales Rep Name and Number of Sales columns after unpivoting](myimages/AfterReformateOfDateColumn.jpg)
-
-### 5. Data Type Formatting
-
-* Converted the **Number of Sales** column $\rightarrow$ **Whole Number**.
-    * *Note: Original column type was text/ABC 123.*
-    ![Number of Sales column before changing the data type from Text/ABC to Whole Number/123](myimages/beforeNumberOfSalesDataTypeChange.jpg)
-    ![Number of Sales column after changing the data type to Whole Number](myimages/AfterDataTypeChange.jpg)
-* Converted the **Date** column $\rightarrow$ **Date type**.
-* **Reordered** the **Date** column to be the first column.
-
-### 6. Final Review & Apply
-
-* Reviewed the **“Changed Type”** steps.
-* **Removed incorrect type conversions** (as shown in the Applied Steps pane).
-    * *Before Deletion:* The applied steps had a redundant `Renamed Columns1` step followed by `Changed Type1`, `Reordered Columns`, and `Changed Type2`.
-    ![Applied Steps pane showing multiple redundant steps before cleanup](myimages/BeforeDeleteChangeSteps.jpg)
-* **Applied** all transformations using **Close & Apply**.
-![Power Query Home tab menu showing the Close & Apply option highlighted](myimages/ClickHomeCloseApply.jpg)
-
-![Final table structure after all transformations including Date Region Sales Rep Name and Number of Sales](myimages/AfterCorrection.jpg)
+### **Get Data From Excel**
+![Get Data](images/getdata_Excel.jpg)
 
 ---
 
-## 🏗 Data Model
+## 🔎 Preview & Initial Checks
 
-Tables included in the model:
+### **Data Preview Before Any Changes**
+![Preview Data](images/PreviewSaleRepData.jpg)
 
-* **Transformed Sales Data** (fact table)
-* **Sales Rep Data** (dimension attributes)
+### **Sales Rep Column Has a Dash Issue**
+![Sales Rep Dash Issue](images/NoticeSalesRephasADash.jpg)
 
-### Key Modeling Notes:
-
-* Clean **star-schema** ready structure.
-* Proper **date formatting** to support time-series visuals.
-* All fields labeled and cleaned to support reporting.
+### **Power Query Loads & Shows Applied Steps**
+![Loading Changes](images/loadingChanges.jpg)
 
 ---
 
-## 📈 Dashboard Features
+## ✂️ Step 1 — Remove Top Rows
 
-* Monthly sales trend line
-* Sales by region bar chart
-* Sales by representative
-* KPI card summarizing overall sales
-* Filter interactions and slicers for dynamic exploration
+### **Remove Top 2 Rows**
+![Remove Top Rows](images/RemoveTop2.jpg)
+
+### **Applied Step Confirmation**
+![Track Removed Rows](images/TrackRemovedTopRows.jpg)
 
 ---
 
-## 🛠 Tools Used
+## 🏷️ Step 2 — Use First Row as Headers
 
-| Tool | Purpose |
-| :--- | :--- |
-| Power BI Desktop | Dashboard creation & modeling |
-| Power Query | Data cleaning & shaping |
-| Excel | Data source |
-| DAX | Metrics & calculations |
-| Power BI Service | Web publishing |
+### **Before Applying Headers**
+![Before Header](images/BeforeDeleteChangeSteps.jpg)
+
+### **Use First Row as Headers**
+![Use First Row](images/useFirstRowasHeaders.jpg)
+
+### **After Applying Headers**
+![Headers Applied](images/AfterSelectedUseFirstRowAsHeaders.jpg)
+
+---
+
+## 🔤 Step 3 — Split Column by Delimiter
+
+### **Open Split Column Tool**
+![Split Column Tool](images/HomeSplitColumnByDelimiter.jpg)
+
+### **Auto-Selected Delimiter Box**
+![Split Dialog](images/SplitColumnDelimiterDialogueBoxAutoSelected.jpg)
+
+### **Rows After Split Completed**
+![Rows After Split](images/RowsAfterSplitcompleted.jpg)
+
+---
+
+## 🔄 Step 4 — Change Data Types
+
+### **Before Changing Data Type**
+![Before Data Type](images/beforeNumberOfSalesDataTypeChange.jpg)
+
+### **After Correction**
+![After Data Type Change](images/AfterDataTypeChange.jpg)
+
+### **After Date Column Reformatted**
+![After Date Reformatted](images/AfterReformateOfDateColumn.jpg)
+
+---
+
+## 📝 Step 5 — Rename Columns
+
+### **Applied Steps After Rename**
+![Applied Steps After Rename](images/AppliedStepsAfterColumnRename.jpg)
+
+### **Data After Rename**
+![Data After Rename](images/DataAfterRename.jpg)
+
+---
+
+## 🔁 Step 6 — Unpivot Columns
+
+### **Unpivot Columns**
+![Unpivot Columns](images/Unpivotcolumns.jpg)
+
+### **Applied Steps After Unpivot**
+![Applied Steps After Unpivot](images/AppliedStepsAfterunpivot.jpg)
+
+### **Data After Unpivot**
+![Data After Unpivot](images/DataAfterUnpivot.jpg)
+
+---
+
+## ✔️ Final Review
+
+### **Final Clean Dataset**
+![Final Review](images/FinalReview.jpg)
+
+---
+
+## 💾 Close & Apply
+
+### **Save & Load Data to Power BI**
+![Close & Apply](images/ClickHomeCloseApply.jpg)
+
+---
+
+If you'd like, I can also:
+- Create a **portfolio-ready summary**
+- Add **before/after tables**
+- Convert this to **PDF** or **PowerPoint**
+- Add a **DAX & Data Model section** for Power BI portfolio projects
+
