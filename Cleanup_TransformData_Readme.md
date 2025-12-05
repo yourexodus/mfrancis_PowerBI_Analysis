@@ -1,12 +1,5 @@
 # 📊 Power Query Data Cleaning Project
 
-This is the full Markdown version of your Power Query transformation walkthrough with **correct `.jpg` image paths**.
-
-All images follow this format:
-```
-images/filename.jpg
-```
-
 ---
 
 ## 🗂️ Source Data Import
@@ -112,12 +105,4 @@ images/filename.jpg
 
 ### **Save & Load Data to Power BI**
 ![Close & Apply](images/ClickHomeCloseApply.jpg)
-
----
-
-If you'd like, I can also:
-- Create a **portfolio-ready summary**
-- Add **before/after tables**
-- Convert this to **PDF** or **PowerPoint**
-- Add a **DAX & Data Model section** for Power BI portfolio projects
 
