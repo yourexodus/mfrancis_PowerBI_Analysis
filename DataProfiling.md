@@ -98,4 +98,4 @@ Time series columns (like Order Date) are **excluded from the low-cardinality di
 * **Data Quality:** The column is perfectly clean (0 Errors, 0 Empty) and ready for calculations.
 
 ### Conclusion for Dashboard Use
-Because the Sales column is a high-cardinality measure with high variability, it should be used for **calculations (SUM, AVG, COUNT)** and should always be viewed **segmented** by your low-cardinality dimension columns, such as shipping method or product ID.
+Because the Sales column is a high-cardinality measure with high variability, it should be used for **calculations (SUM, AVG, COUNT)** and should always be viewed **segmented** by my other low-cardinality dimension columns, such as shipping method or product ID.
