@@ -162,7 +162,7 @@ Settings:
 - Column: **Sales**
 
 **Screenshot:**  
-![](./images_advancedEditor/InvokedFunction.jpg)
+![](./images_advancedEditor/invoke_fn_Salestier.jpg)
 
 Generated M code:
 
