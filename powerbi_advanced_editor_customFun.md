@@ -147,6 +147,7 @@ in
 **Screenshot:**  
 ![](./images_advancedEditor/Function_SalesTier.jpg)
 
+Click Done
 Rename: **fnSalesTier**
 
 ---
