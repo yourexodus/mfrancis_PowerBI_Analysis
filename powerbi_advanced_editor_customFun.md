@@ -2,43 +2,27 @@
 
 ## Sales Tier Classification Using M Code and Custom Functions
 
-(Images stored in your **images_advancedEditor** folder --- add correct
-file names where noted.)
+(Images stored in your **images_advancedEditor** folder.)
 
-------------------------------------------------------------------------
+---
 
 ## #️⃣ 1. Goal
 
-Use Power Query Advanced Editor to classify products into **Sales
-Tiers** based on their `Sales` value.
+Use Power Query Advanced Editor to classify products into **Sales Tiers** based on their `Sales` value.
 
 ### **Sales Tiers**
 
-  -------------------------------------------------------------------------
-  **Tier**            **Range**                              **Why**
-  ------------------- -------------------------------------- --------------
-  **Low**             \$2.99 -- \$99.99                      Low-value
-                                                             items well
-                                                             below the mean
+| **Tier**  | **Range**             | **Why** |
+|----------|------------------------|---------|
+| Low      | $2.99 – $99.99         | Low-value items well below the mean |
+| Mid      | $100 – $199.99         | Majority of sales (cluster near mode/mean) |
+| High     | $200 – $499.99         | High-value but not extreme |
+| Premium  | $500 – $899.88         | Rare, outlier-like sales |
 
-  **Mid**             \$100 -- \$199.99                      Majority of
-                                                             sales (cluster
-                                                             near
-                                                             mode/mean)
+**Full Documentation:**  
+👉 https://docs.google.com/document/d/e/2PACX-1vQt4oKEMdnAltNa74DT_voiXhBuB1JhBGiWpqNFUpaigupY3DiPL3_DAbA3B00Gu_s0ponlnE7DO8LS/pub
 
-  **High**            \$200 -- \$499.99                      High-value but
-                                                             not extreme
-
-  **Premium**         \$500 -- \$899.88                      Rare,
-                                                             outlier-like
-                                                             sales
-  -------------------------------------------------------------------------
-
-**Full Documentation:**\
-👉
-https://docs.google.com/document/d/e/2PACX-1vQt4oKEMdnAltNa74DT_voiXhBuB1JhBGiWpqNFUpaigupY3DiPL3_DAbA3B00Gu_s0ponlnE7DO8LS/pub
-
-------------------------------------------------------------------------
+---
 
 ## #️⃣ 2. Open Power Query → Advanced Editor
 
@@ -46,18 +30,18 @@ Go to:
 
 **Home → Transform Data → Transform Data**
 
-Then open:
+Then:
 
 📌 **Advanced Editor**
 
-**Insert image:**\
-![](images_advancedEditor/open_advanced_editor.jpg)
+**Screenshot:**  
+![](./images_advancedEditor/click_advancededitor.jpg)
 
-------------------------------------------------------------------------
+---
 
 ## #️⃣ 3. Original Query (Before Adding Sales Tier)
 
-``` m
+```m
 let
     Source = Excel.Workbook(File.Contents("C:\095214Data\Connecting to Data\MyFootprintSportsSalesProducts.xlsx"), null, true),
     #"Sales Orders_Sheet" = Source{[Item="Sales Orders",Kind="Sheet"]}[Data],
@@ -75,13 +59,16 @@ in
     #"Reordered Columns"
 ```
 
-------------------------------------------------------------------------
+**Screenshot (before):**  
+![](./images_advancedEditor/BeforeProduct_Tiers.jpg)
+
+---
 
 ## #️⃣ 4. Add Sales Tier in Advanced Editor
 
-Insert this step before the final `in` statement:
+Insert this step before the final `in`:
 
-``` m
+```m
     #"Added Sales Tier" = Table.AddColumn(#"Reordered Columns", "SalesTier", each 
         if [Sales] >= 500 then "Premium"
         else if [Sales] >= 200 then "High"
@@ -89,9 +76,9 @@ Insert this step before the final `in` statement:
         else "Low")
 ```
 
-### ✔️ Updated Final Code Block
+### ✔️ Final Code Block
 
-``` m
+```m
 let
     Source = Excel.Workbook(File.Contents("C:\095214Data\Connecting to Data\MyFootprintSportsSalesProducts.xlsx"), null, true),
     #"Sales Orders_Sheet" = Source{[Item="Sales Orders",Kind="Sheet"]}[Data],
@@ -114,36 +101,38 @@ in
     #"Added Sales Tier"
 ```
 
-------------------------------------------------------------------------
+**Screenshot (after code update):**  
+![](./images_advancedEditor/CodeAfterSalesTiersUpdate.jpg)
+
+---
 
 ## #️⃣ 5. Verify the New Column
 
-Insert screenshot:\
-![](images_advancedEditor/verify_column.jpg)
+**Screenshot:**  
+![](./images_advancedEditor/DataPane_newColumn.jpg)
 
-------------------------------------------------------------------------
+---
 
 ## #️⃣ 6. Load the Data
 
-In Power BI:\
+Power BI:  
 **Home → Close & Apply**
 
-Insert screenshot:\
-![](images_advancedEditor/close_and_apply.jpg)
+**Screenshot:**  
+![](./images_advancedEditor/RefreshPreview.jpg)
 
-------------------------------------------------------------------------
+---
 
-## #️⃣ 7. Create a Custom Function (Optional)
+## #️⃣ 7. Create a Custom Function
 
-### Step 1 --- Create a Blank Query
+### Step 1 — Create Blank Query
 
-Home → New Source → **Blank Query**\
+Home → New Source → **Blank Query**  
 Right-click → **Advanced Editor**
 
 Paste:
 
-``` m
-// fnSalesTier – Returns tier based on Sales value
+```m
 (Sales as number) as text =>
 let
     Tier =
@@ -155,43 +144,35 @@ in
     Tier
 ```
 
-Insert screenshot:\
-![](images_advancedEditor/function_icon_fx.jpg)
+**Screenshot:**  
+![](./images_advancedEditor/Function_SalesTier.jpg)
 
-Rename the query:\
-**fnSalesTier**
+Rename: **fnSalesTier**
 
-------------------------------------------------------------------------
+---
 
-## #️⃣ 8. Apply the Function to Your Table
+## #️⃣ 8. Apply Function to Sales Column
 
-**Add Column → Invoke Custom Function**
+Add Column → **Invoke Custom Function**
 
-Settings:\
-- New column name: **SalesTier_fn**\
-- Function: **fnSalesTier**\
+Settings:
+
+- Name: **SalesTier_fn**  
+- Function: **fnSalesTier**  
 - Column: **Sales**
 
-Insert screenshot:\
-![](images_advancedEditor/invoke_function.jpg)
+**Screenshot:**  
+![](./images_advancedEditor/InvokedFunction.jpg)
 
-Power Query generates:
+Generated M code:
 
-``` m
+```m
 = Table.AddColumn(#"Previous Step", "SalesTier_fn", each fnSalesTier([Sales]))
 ```
 
-------------------------------------------------------------------------
+---
 
-## #️⃣ 9. Compare Both Methods
+## #️⃣ 9. Compare Results
 
-  Sales    SalesTier   SalesTier_fn
-  -------- ----------- --------------
-  538.93   Premium     Premium
-  74.95    Low         Low
-  149.94   Mid         Mid
-
-Insert screenshot:\
-![](images_advancedEditor/compare_columns.jpg)
-
-------------------------------------------------------------------------
+**Screenshot:**  
+![](./images_advancedEditor/compareValues.jpg)
