@@ -1,6 +1,6 @@
 # 📊 Power Query Data Cleaning Project
 
-Clean and Reshape Sales Rep Data
+Connect to Sales Rep Data
 ---
 
 ## 🗂️ Source Data Import
@@ -97,7 +97,7 @@ Clean and Reshape Sales Rep Data
 
 ## ✔️ Final Review
 
-### **Final Clean Dataset**
+### **Final Dataset**
 ![Final Review](images/FinalReview.jpg)
 
 ---
