@@ -126,9 +126,9 @@ Power BI:
 ## #️⃣ 7. Create a Custom Function
 
 ### Step 1 — Create Blank Query
-
-Home → New Source → **Blank Query**  
-Right-click → **Advanced Editor**
+a. Home -> Transform Data
+b. New Source → **Blank Query**  
+c. click → **Advanced Editor**
 
 Paste:
 
