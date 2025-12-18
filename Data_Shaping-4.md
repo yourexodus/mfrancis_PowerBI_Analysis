@@ -114,7 +114,7 @@ Steps performed:
 3. Opened the **Column tools** tab.
 4. From the **Data category** drop-down list, selected **City**.
 
-![Data Category](images_dataShaping/DataCategory.jpg)
+![Data Category](images_dataShaping/DataCategorycity.jpg)
 
 5. Selected the **Country** field and applied the **Country** data category.
 6. Selected the **State** field and applied the **State or Province** data category.
