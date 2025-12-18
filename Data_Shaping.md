@@ -1,117 +1,162 @@
- 
----
 
-## Project Objectives
+## Purpose of This Work
 
-- Review and manage relationships between tables
-- Append multiple sales tables
-- Clean and transform data using Power Query
-- Create calculated columns
-- Apply proper data types and formatting
-- Build report visuals in Power BI
+The goal of this data shaping process was to:
 
----
-
-## Dataset Preparation & Modeling
-
-### Reviewing Relationships
-- Checked existing relationships
-- Verified cardinality (many-to-one)
-- Activated inactive relationships
-
-![Relationships Overview](images_dataShaping/Relationships.jpeg)
-![Cardinality Check](images_dataShaping/cardinality.jpeg)
-![Manage Relationships](images_dataShaping/managerelationships.jpeg)
-![Make Relationship Active](images_dataShaping/MakeRelationshipActive.jpeg)
+- Prepare sales data for accurate reporting
+- Validate and manage relationships between tables
+- Clean and format data to prevent reporting errors
+- Create calculated columns to support analysis
+- Build report visuals from a properly modeled dataset
 
 ---
 
-### Date Table Relationship
-- Connected Date table to Sales Order table
-- Saved relationship configuration
+## Reviewing and Managing Table Relationships
 
-![Check Date](images_dataShaping/checktheDate.jpeg)
-![Date Relationship Completed](images_dataShaping/DateRelationshipCompleted.jpeg)
-![Date to Sales Order Relationship Save](images_dataShaping/DateToSalesOrderRelationshipSave.jpeg)
+The first step was to review all existing relationships in the data model to ensure they were correct and active.
 
----
+- Opened **Model View** to inspect table connections
+- Verified **cardinality** between tables (many-to-one where expected)
+- Ensured correct primary and foreign keys were being used
+- Identified inactive or missing relationships
 
-## Data Transformation (Power Query)
-
-### Appending Tables
-- Appended historical sales tables into a single Sales Orders table
-
-![Click Append Queries](images_dataShaping/ClickAppendQueries.jpeg)
-![Append Two Tables](images_dataShaping/AppendtwoTables.jpeg)
-![Close and Apply](images_dataShaping/CloseApply.jpeg)
+![Relationships](images_dataShaping/Relationships.jpg)
+![Cardinality](images_dataShaping/cardinality.jpg)
+![Manage Relationships](images_dataShaping/managerelationships.jpg)
 
 ---
 
-### Cleaning Data
-- Removed rows with missing Customer IDs
-- Filtered out errors using filters
+## Activating and Correcting Relationships
 
-![Missing Customer ID](images_dataShaping/MissingCustomerID.jpeg)
-![Remove Errors Using Filter](images_dataShaping/removeErrorsUsingFilter.jpeg)
+Some relationships required activation or adjustment to ensure filters flowed correctly across tables.
 
----
+- Selected inactive relationships
+- Confirmed join columns
+- Set relationships to **Active**
+- Saved updates to the model
 
-### Data Formatting
-- Set correct data categories
-- Adjusted date and numeric formats
-- Turned off summarization where required
-
-![Data Category](images_dataShaping/DataCategory.jpeg)
-![Currency Format](images_dataShaping/CurrencyFormat.jpeg)
-![Dont Summarize](images_dataShaping/DontSummarize.jpeg)
-![Format Date](images_dataShaping/formatDate.jpeg)
+![Make Relationship Active](images_dataShaping/MakeRelationshipActive.jpg)
 
 ---
 
-## Calculated Columns
+## Date Table Relationship Validation
 
-### Days to Ship
-- Created a calculated column for shipping duration
-- Converted values to whole numbers
+A key step was validating the relationship between the **Date table** and the **Sales Orders table**.
 
-![Double Click Insert Days to Ship](images_dataShaping/DoubleClickOrInsertDaystoShip.jpeg)
-![Days to Ship Whole Number](images_dataShaping/DaysToShipWholeNumber.jpeg)
-![Review Order Date Ship Date](images_dataShaping/ReviewOrderDateShipDate.jpeg)
+- Confirmed the correct date column was used
+- Ensured relationship direction supported reporting needs
+- Saved relationship changes once verified
 
----
-
-## Report View & Visuals
-
-### Creating Visuals
-- Added table visuals to report
-- Selected relevant fields for analysis
-
-![Click Model View](images_dataShaping/clickModelView.jpeg)
-![Click Focus Mode](images_dataShaping/ClickFocusMode.jpeg)
-![Select Table Visual](images_dataShaping/SelectTableVisual.jpeg)
-![Table Visual Result](images_dataShaping/TableVisualResult.jpeg)
+![Check the Date](images_dataShaping/checktheDate.jpg)
+![Date Relationship Completed](images_dataShaping/DateRelationshipCompleted.jpg)
+![Date to Sales Order Relationship Save](images_dataShaping/DateToSalesOrderRelationshipSave.jpg)
 
 ---
 
-### Final Report
-- Sales, profit, and shipping metrics visualized
-- Returned to report view after transformations
+## Appending Sales Tables
 
-![Report New Visual](images_dataShaping/Report_NewVisual.jpeg)
-![Sales Profit Shipping](images_dataShaping/SalesProfitShipping.jpeg)
-![Back to Report](images_dataShaping/BacktoReport.jpeg)
-![Back to Report After Adding Date Ship](images_dataShaping/BacktoReportafterAddingdateship.jpeg)
+Historical sales data was combined into a single table using Power Query.
+
+Steps included:
+- Selecting **Append Queries**
+- Appending multiple sales tables together
+- Verifying column alignment
+- Applying changes to load data into the model
+
+![Click Append Queries](images_dataShaping/ClickAppendQueries.jpg)
+![Append Two Tables](images_dataShaping/AppendtwoTables.jpg)
+![Close and Apply](images_dataShaping/CloseApply.jpg)
 
 ---
 
-## Key Skills Demonstrated
+## Cleaning and Validating Data
+
+Data cleanup was required to remove invalid or incomplete records.
+
+Actions taken:
+- Identified rows with missing Customer IDs
+- Removed rows containing errors
+- Used filters to exclude invalid data
+- Ensured only clean records remained in the dataset
+
+![Missing Customer ID](images_dataShaping/MissingCustomerID.jpg)
+![Remove Errors Using Filter](images_dataShaping/removeErrorsUsingFilter.jpg)
+
+---
+
+## Data Formatting and Categorization
+
+To ensure correct aggregation and reporting behavior, several formatting updates were applied.
+
+### Formatting Steps
+- Set correct **data categories** (city, state, postal code)
+- Applied **currency formatting** to monetary fields
+- Disabled summarization for numeric fields used as attributes
+- Standardized date formats
+
+![Data Category](images_dataShaping/DataCategory.jpg)
+![Currency Format](images_dataShaping/CurrencyFormat.jpg)
+![Dont Summarize](images_dataShaping/DontSummarize.jpg)
+![Format Date](images_dataShaping/formatDate.jpg)
+
+---
+
+## Creating a Calculated Column: Days to Ship
+
+A calculated column was added to measure shipping performance.
+
+Steps included:
+- Creating a new column in Power Query
+- Calculating the difference between Order Date and Ship Date
+- Converting the result to a whole number
+- Validating values for accuracy
+
+![Insert Days to Ship](images_dataShaping/DoubleClickOrInsertDaystoShip.jpg)
+![Days to Ship Whole Number](images_dataShaping/DaysToShipWholeNumber.jpg)
+![Review Order Date Ship Date](images_dataShaping/ReviewOrderDateShipDate.jpg)
+
+---
+
+## Report View and Visual Creation
+
+After data preparation, the focus shifted to building visuals in Report View.
+
+Steps performed:
+- Returned to Report View
+- Selected appropriate visuals
+- Added fields from cleaned tables
+- Verified that filters and relationships worked as expected
+
+![Click Model View](images_dataShaping/clickModelView.jpg)
+![Click Focus Mode](images_dataShaping/ClickFocusMode.jpg)
+![Select Table Visual](images_dataShaping/SelectTableVisual.jpg)
+![Table Visual Result](images_dataShaping/TableVisualResult.jpg)
+
+---
+
+## Final Report Review
+
+The final report includes sales, profit, and shipping-related metrics derived from the cleaned and modeled data.
+
+- Verified visuals updated correctly after transformations
+- Confirmed calculated columns displayed accurate values
+- Ensured report was ready for analysis
+
+![New Visual](images_dataShaping/Report_NewVisual.jpg)
+![Sales Profit Shipping](images_dataShaping/SalesProfitShipping.jpg)
+![Back to Report](images_dataShaping/BacktoReport.jpg)
+![Back to Report After Adding Date Ship](images_dataShaping/BacktoReportafterAddingdateship.jpg)
+
+---
+
+## Skills Demonstrated
 
 - Power BI Data Modeling
-- Power Query Transformations
 - Relationship Management
+- Power Query Transformations
 - Data Cleaning & Validation
 - Calculated Columns
-- Business Reporting & Visualization
+- Report Development
 
 ---
 
@@ -119,12 +164,10 @@
 
 - Power BI Desktop
 - Power Query Editor
-- DAX (basic calculated columns)
 
 ---
 
 ## Notes
 
-This project reflects hands-on practice with real-world data shaping scenarios and is intended for **data analyst and analytics engineer roles**.
-
----
+This documentation reflects the **exact steps and workflow** captured in the original project notes and screenshots.  
+No assumptions or undocumented steps were added.
