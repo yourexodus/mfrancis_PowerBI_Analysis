@@ -100,9 +100,9 @@ Click Ok, close and Apply
 ---
 
 ## 📊 Create Table Visual  
-
-Returned to Report View and added a Table visual to confirm that data loaded correctly.
-
+steps:
+1. click report View
+2. click New Visual
 ![Report view](images_dataShaping/clickREportView.jpg)
 
 Home→ Table Icon.
