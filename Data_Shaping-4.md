@@ -34,13 +34,20 @@ Opened the Model view to inspect table relationships and cardinality.
 ### Manage and Activate Relationships  
 Activated any inactive relationships to ensure proper filtering across tables.
 
-![Manage Relationships](images_dataShaping/managerelationships.jpg)
+
 ![Make Relationship Active](images_dataShaping/MakeRelationshipActive.jpg)
 
 ---
 ## 📅 Date Table Relationship
 
 Connected the **Date** table to the **Sales Orders** table by dragging the Date field to Order Date.
+
+Steps:
+1. Select the Date table 
+2. Click the Date field
+3. Drag Date field to the Order Date in the Sales Orders table 
+4. New Relationship box will pop up. 
+5. Click save 
 
 ![Date Relationship Completed](images_dataShaping/DateRelationshipCompleted.jpg)
 ![Date to Sales Order Relationship Save](images_dataShaping/DateToSalesOrderRelationshipSave.jpg)
@@ -53,7 +60,13 @@ Disabled summarization for the `MonthNum` field in the Date table.
 
 > This avoids Power BI automatically summing month numbers in visuals. :contentReference[oaicite:3]{index=3}
 
-*(If you have a screenshot of this, add it here)*
+Steps:
+1. Click Table View 
+2. Expand Date Table
+3. Click MonthNum
+4. On the Column tools tab, from Summarization drop down list, select Don’t Summarize
+
+![DontSummarize](images_dataShaping/DontSummarize.jpg)
 
 ---
 
@@ -96,7 +109,7 @@ Home→ Table Icon.
 Confirm the Table visualization is selected
 
 ![ClickFocusMode](images_dataShaping/ClickFocusMode.jpg)
-YOU will see the New Visual Option after you click the Report View
+Notice the New Visual Option will only appear after you click the Report View
 
 
 ![TableVisualResult](images_dataShaping/TableVisualResult.jpg)
@@ -179,7 +192,7 @@ Created a **Days to Ship** column to measure shipment duration:
 
 ---
 
-## 📈 Review in Report View
+## 📈 Review in 
 
 Confirmed that visuals are working with cleaned and transformed data:
 
@@ -193,6 +206,15 @@ Confirmed that visuals are working with cleaned and transformed data:
 
 ---
 
+## 📈 Review in Code Advanced Editor
+
+Steps
+1. Home -> transform Data
+2. click Sales Orders Table
+3. click Advanced Editor
+
+![AdvancedEditor_Code](images_dataShaping/AdvancedEditor_Code).jpg)
+---
 ## 📊 Final Report Review
 
 Verified visuals after all transformations were applied:
