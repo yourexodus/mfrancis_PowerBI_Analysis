@@ -106,17 +106,19 @@ Returned to Report View and added a Table visual to confirm that data loaded cor
 ![Report view](images_dataShaping/clickREportView.jpg)
 
 Home→ Table Icon.
-Confirm the Table visualization is selected
+Confirm the Table visualization is selected.  Notice the New Visual Option will only appear after you click the Report View
 
 ![ClickFocusMode](images_dataShaping/ClickFocusMode.jpg)
-Notice the New Visual Option will only appear after you click the Report View
+
+Steps:
+1. Expand the Data pane on the right
+2. Drag or check desired fields 
 
 
 ![TableVisualResult](images_dataShaping/TableVisualResult.jpg)
 
-Expand the Data pane on the right
-Drag or check the following fields 
-Tables
+
+Confirm data on canvas:
 Customers: Customer Name
 Products:Product Name
 Date: Year, Month
