@@ -27,6 +27,9 @@ This project focused on preparing the dataset for accurate reporting and analysi
 ### Review Relationships  
 Opened the Model view to inspect table relationships and cardinality.
 
+Steps:
+click Home -> Manage Relationships
+![managerelationshps](images_dataShaping/managerelationshps.jpg)
 ![Click Model View](images_dataShaping/clickModelView.jpg)
 ![Relationships](images_dataShaping/Relationships.jpg)
 ![Cardinality](images_dataShaping/cardinality.jpg)
