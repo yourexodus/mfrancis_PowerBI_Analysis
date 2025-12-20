@@ -1,70 +1,65 @@
-## Purpose of This Work
+# Power BI Data Shaping & Modeling
 
-The purpose of this data shaping process was to prepare data for accurate reporting by:
+This document walks through the **data shaping and modeling work** done in Power BI Desktop for the Sales dataset.  
+All steps and screenshots reflect the documented workflow from the original project notes. :contentReference[oaicite:2]{index=2}
 
-- Reviewing and correcting table relationships
-- Appending multiple sales tables
-- Cleaning and validating data
-- Applying correct data categories and formatting
-- Creating calculated columns
-- Building report visuals from a clean data model
+> **Note:** Images are stored in the repository at:
+>
+> `images_dataShaping/`
 
 ---
 
-## Reviewing and Managing Table Relationships
+## Purpose
 
-The first step was to review existing relationships in the data model.
+This project focused on preparing the dataset for accurate reporting and analysis by:
 
-Actions performed:
-- Opened **Model View**
-- Inspected relationships between tables
-- Verified **cardinality** (many-to-one where expected)
-- Identified inactive relationships
+- Reviewing and activating relationships between tables  
+- Appending multiple sales tables  
+- Cleaning and transforming data  
+- Setting correct data categories, including geographic fields  
+- Creating calculated columns  
+- Building visuals and confirming data integrity in the report view
+
+---
+
+## 🧩 Reviewing and Activating Relationships
+
+### Review Relationships  
+Opened the Model view to inspect table relationships and cardinality.
 
 ![Relationships](images_dataShaping/Relationships.jpg)
 ![Cardinality](images_dataShaping/cardinality.jpg)
+
+### Manage and Activate Relationships  
+Activated any inactive relationships to ensure proper filtering across tables.
+
 ![Manage Relationships](images_dataShaping/managerelationships.jpg)
-
----
-
-## Activating Relationships
-
-Inactive relationships were reviewed and activated to ensure proper filtering across tables.
-
-Steps:
-- Selected inactive relationship
-- Verified join columns
-- Set relationship to **Active**
-- Saved changes
-
 ![Make Relationship Active](images_dataShaping/MakeRelationshipActive.jpg)
 
 ---
 
-## Validating Date Table Relationships
+## 📅 Date Table Relationship
 
-The Date table relationship was reviewed and confirmed.
+Connected the **Date** table to the **Sales Orders** table by dragging the Date field to Order Date.
 
-Steps:
-- Verified correct date fields
-- Confirmed relationship direction
-- Saved relationship configuration
-
-![Check the Date](images_dataShaping/checktheDate.jpg)
 ![Date Relationship Completed](images_dataShaping/DateRelationshipCompleted.jpg)
 ![Date to Sales Order Relationship Save](images_dataShaping/DateToSalesOrderRelationshipSave.jpg)
 
 ---
 
-## Appending Sales Tables
+## 📌 Summarization Settings
 
-Multiple sales tables were combined into a single table using Power Query.
+Disabled summarization for the `MonthNum` field in the Date table.
 
-Steps:
-- Selected **Append Queries**
-- Appended sales tables
-- Verified column alignment
-- Applied changes
+> This avoids Power BI automatically summing month numbers in visuals. :contentReference[oaicite:3]{index=3}
+
+*(If you have a screenshot of this, add it here)*
+
+---
+
+## ➕ Appending Sales Tables
+
+Appended the historical Sales Orders (2019–20) table into the main Sales Orders table.
 
 ![Click Append Queries](images_dataShaping/ClickAppendQueries.jpg)
 ![Append Two Tables](images_dataShaping/AppendtwoTables.jpg)
@@ -72,28 +67,26 @@ Steps:
 
 ---
 
-## Cleaning and Validating Data
+## 📊 Create Table Visual (Basic Confirmation)
 
-Data cleanup was performed to remove invalid records.
+Returned to Report View and added a Table visual to confirm that data loaded correctly.
 
-Actions:
-- Identified missing Customer IDs
-- Removed error rows
-- Applied filters to clean data
+*(Insert your own visual screenshot if available)*
+
+---
+
+## 🧹 Cleaning and Removing Errors
+
+Identified and removed records with erroneous Customer IDs from the Sales Orders table.
 
 ![Missing Customer ID](images_dataShaping/MissingCustomerID.jpg)
 ![Remove Errors Using Filter](images_dataShaping/removeErrorsUsingFilter.jpg)
 
 ---
 
-## Formatting Data Fields
+## 🔢 Data Formatting
 
-Formatting updates were applied to ensure correct aggregation and display.
-
-Actions:
-- Applied currency formatting
-- Disabled summarization where required
-- Standardized date formats
+Applied currency and number formatting so fields like Sales, Profit, and Shipping Cost display correctly.
 
 ![Currency Format](images_dataShaping/CurrencyFormat.jpg)
 ![Dont Summarize](images_dataShaping/DontSummarize.jpg)
@@ -101,40 +94,30 @@ Actions:
 
 ---
 
-## Setting Geographic Data Types
+## 📍 Setting Geographic Data Types
 
-### Task: Set the geographic data type for geographic fields
+Assigned the correct data category for geographic fields in the Customers table:
 
-To ensure accurate geographic analysis and mapping, geographic fields were assigned the appropriate data categories.
+1. Expanded **Customers** in the Data pane. :contentReference[oaicite:4]{index=4}  
+2. Set **City** → *City*  
+3. Set **Country** → *Country*  
+4. Set **State** → *State or Province*  
+5. Set **Zip Code** → *Postal code*  
+6. Returned to Report View and saved.
 
-Steps performed:
+![Data Category](images_dataShaping/DataCategory.jpg)
 
-1. In the **Data pane**, expanded the **Customers** table.
-2. Selected the **City** column.
-3. Opened the **Column tools** tab.
-4. From the **Data category** drop-down list, selected **City**.
-
-![Data Category](images_dataShaping/DataCategorycity.jpg)
-
-5. Selected the **Country** field and applied the **Country** data category.
-6. Selected the **State** field and applied the **State or Province** data category.
-7. Selected the **Zip Code** field and applied the **Postal code** data category.
-8. Selected the **Report View** icon.
-9. Clicked **Save**.
-
-This ensures Power BI correctly interprets geographic fields for filtering and mapping visuals.
+> Assigning correct geographic categories enables accurate mapping and filtering.
 
 ---
 
-## Creating a Calculated Column: Days to Ship
+## 📐 Calculated Column: Days to Ship
 
-A calculated column was created to measure the number of days between order date and ship date.
+Created a **Days to Ship** column to measure shipment duration:
 
-Steps:
-- Inserted a new column
-- Calculated date difference
-- Converted values to whole numbers
-- Reviewed results for accuracy
+- Used the Add Column → Custom Column feature
+- Subtracted Order Date from Ship Date
+- Converted output to Whole Number
 
 ![Insert Days to Ship](images_dataShaping/DoubleClickOrInsertDaystoShip.jpg)
 ![Days to Ship Whole Number](images_dataShaping/DaysToShipWholeNumber.jpg)
@@ -142,15 +125,12 @@ Steps:
 
 ---
 
-## Report View and Visual Creation
+## 📈 Review in Report View
 
-After completing data preparation, visuals were created in Report View.
+Confirmed that visuals are working with cleaned and transformed data:
 
-Steps:
-- Returned to Report View
-- Selected table visual
-- Added fields from the data model
-- Verified results
+- Checked table visuals  
+- Added fields from Customers, Products, and Date tables
 
 ![Click Model View](images_dataShaping/clickModelView.jpg)
 ![Click Focus Mode](images_dataShaping/ClickFocusMode.jpg)
@@ -159,13 +139,9 @@ Steps:
 
 ---
 
-## Final Report Review
+## 📊 Final Report Review
 
-The final report was reviewed to ensure all changes were reflected correctly.
-
-- Verified visuals updated after transformations
-- Confirmed calculated columns displayed correct values
-- Ensured report was ready for analysis
+Verified visuals after all transformations were applied:
 
 ![New Visual](images_dataShaping/Report_NewVisual.jpg)
 ![Sales Profit Shipping](images_dataShaping/SalesProfitShipping.jpg)
@@ -174,26 +150,19 @@ The final report was reviewed to ensure all changes were reflected correctly.
 
 ---
 
-## Skills Demonstrated
+## 🛠 Skills Demonstrated
 
-- Power BI Data Modeling
-- Relationship Management
-- Power Query Transformations
-- Data Cleaning and Validation
-- Geographic Data Categorization
-- Calculated Columns
-- Report Development
-
----
-
-## Tools Used
-
-- Power BI Desktop
-- Power Query Editor
+- Power BI Data Modeling  
+- Query Transformation & Cleaning  
+- Geographic Data Categorization  
+- Calculated Columns  
+- Visual Validation  
+- Report View Verification
 
 ---
 
-## Notes
+## 🧰 Tools Used
 
-This documentation reflects only the steps performed and captured in the original project notes and screenshots.  
-No additional assumptions or undocumented features were added.
+- Power BI Desktop  
+- Power Query Editor  
+- Built-in Power BI modeling features
