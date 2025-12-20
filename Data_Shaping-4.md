@@ -27,17 +27,17 @@ This project focused on preparing the dataset for accurate reporting and analysi
 ### Review Relationships  
 Opened the Model view to inspect table relationships and cardinality.
 
-Steps:
-click Home -> Manage Relationships
-![managerelationshps](images_dataShaping/managerelationshps.jpg)
+
 ![Click Model View](images_dataShaping/clickModelView.jpg)
 ![Relationships](images_dataShaping/Relationships.jpg)
 ![Cardinality](images_dataShaping/cardinality.jpg)
 
 ### Manage and Activate Relationships  
+
+Steps:
+click Home -> Manage Relationships
+![managerelationshps](images_dataShaping/managerelationshps.jpg)
 Activated any inactive relationships to ensure proper filtering across tables.
-
-
 ![Make Relationship Active](images_dataShaping/MakeRelationshipActive.jpg)
 
 ---
@@ -188,11 +188,13 @@ This is the last column in the table.
 2. Select Transform→Data Type: Any→Whole Number.
 3. Click save
 
-![Days to Ship Whole Number](images_dataShaping/DaysToShipWholeNumber.jpg)
 
-Uncheck ID field  
-Check the Days to ship field 
-Confirm Days to Ship field is present on canvas.
+## 🔢 Data Formatting: Days to Ship 
+![Days to Ship Whole Number](images_dataShaping/DaysToShipWholeNumber.jpg)
+Steps:
+1. Uncheck ID field  
+2. Check the Days to ship field 
+3. Confirm Days to Ship field is present on canvas.
 
 ![Review Order Date Ship Date](images_dataShaping/ReviewOrderDateShipDate.jpg)
 
@@ -238,17 +240,13 @@ Steps
 2. click Sales Orders Table
 3. click Advanced Editor
 
-![AdvancedEditor_Code](images_dataShaping/AdvancedEditor_Code).jpg)
+![AdvancedEditor_Code](images_dataShaping/AdvancedEditor_Code.jpg)
 ---
 ## 📊 Final Report Review
 
 Verified visuals after all transformations were applied:
 
-![New Visual](images_dataShaping/Report_NewVisual.jpg)
-![Sales Profit Shipping](images_dataShaping/SalesProfitShipping.jpg)
-![Back to Report](images_dataShaping/BacktoReport.jpg)
-![Back to Report After Adding Date Ship](images_dataShaping/BacktoReportafterAddingdateship.jpg)
-
+![FinalReport](images_dataShaping/FinalReport.jpg)
 ---
 
 ## 🛠 Skills Demonstrated
