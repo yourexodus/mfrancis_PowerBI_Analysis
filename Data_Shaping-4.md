@@ -113,6 +113,7 @@ Confirm the Table visualization is selected.  Notice the New Visual Option will 
 Steps:
 1. Expand the Data pane on the right
 2. Drag or check desired fields 
+3. Click Back to Report
 
 
 ![TableVisualResult](images_dataShaping/TableVisualResult.jpg)
@@ -123,9 +124,9 @@ Customers: Customer Name
 Products:Product Name
 Date: Year, Month
 
+
 ![BacktoREport](images_dataShaping/BacktoREport.jpg)
 
-Click Back to Report
 
 
 ---
@@ -134,10 +135,9 @@ Click Back to Report
 
 Identified and removed records with erroneous Customer IDs from the Sales Orders table.
 
-Remove Errors using Filter
-
-
 ![Missing Customer ID](images_dataShaping/MissingCustomerID.jpg)
+
+Remove Errors using Filter
 
 Steps:
 1. Select Home→Transform data→Transform data.
@@ -157,9 +157,38 @@ Steps:
 
 Applied currency and number formatting so fields like Sales, Profit, and Shipping Cost display correctly.
 
+Sales column: Reformat as currency
 ![Currency Format](images_dataShaping/CurrencyFormat.jpg)
-![Dont Summarize](images_dataShaping/DontSummarize.jpg)
-![Format Date](images_dataShaping/formatDate.jpg)
+
+Order Date column:  Reformat as Date mm/dd/yyyy
+![dateYear](images_dataShaping/dateYear.jpg)
+
+---
+## 📐 Calculated Column: Days to Ship
+
+Created a **Days to Ship** column to measure shipment duration:
+
+Steps:
+1. On the Add Column tab 
+2. select Custom Column
+3. In the Custom Column dialog box 
+
+![Insert Days to Ship](images_dataShaping/DoubleClickOrInsertDaystoShip.jpg)
+
+Change the data type for Days to Ship to a whole number.
+Steps:
+1. select the Days to Ship column.
+This is the last column in the table.
+2. Select Transform→Data Type: Any→Whole Number.
+3. Click save
+
+![Days to Ship Whole Number](images_dataShaping/DaysToShipWholeNumber.jpg)
+
+Uncheck ID field  
+Check the Days to ship field 
+Confirm Days to Ship field is present on canvas.
+
+![Review Order Date Ship Date](images_dataShaping/ReviewOrderDateShipDate.jpg)
 
 ---
 
@@ -180,19 +209,7 @@ Assigned the correct data category for geographic fields in the Customers table:
 
 ---
 
-## 📐 Calculated Column: Days to Ship
 
-Created a **Days to Ship** column to measure shipment duration:
-
-- Used the Add Column → Custom Column feature
-- Subtracted Order Date from Ship Date
-- Converted output to Whole Number
-
-![Insert Days to Ship](images_dataShaping/DoubleClickOrInsertDaystoShip.jpg)
-![Days to Ship Whole Number](images_dataShaping/DaysToShipWholeNumber.jpg)
-![Review Order Date Ship Date](images_dataShaping/ReviewOrderDateShipDate.jpg)
-
----
 
 ## 📈 Review in 
 
