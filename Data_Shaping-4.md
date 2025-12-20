@@ -215,22 +215,7 @@ Assigned the correct data category for geographic fields in the Customers table:
 
 > Assigning correct geographic categories enables accurate mapping and filtering.
 
----
-
-
-
-## 📈 Review in 
-
-Confirmed that visuals are working with cleaned and transformed data:
-
-- Checked table visuals  
-- Added fields from Customers, Products, and Date tables
-
-
-![Click Focus Mode](images_dataShaping/ClickFocusMode.jpg)
-
-![Table Visual Result](images_dataShaping/TableVisualResult.jpg)
-
+ 
 ---
 
 ## 📈 Review in Code Advanced Editor
