@@ -99,13 +99,16 @@ Click Ok, close and Apply
 
 ---
 
-## 📊 Create Table Visual (Basic Confirmation)
+## 📊 Create Table Visual  
 
 Returned to Report View and added a Table visual to confirm that data loaded correctly.
 
 ![Report view](images_dataShaping/clickREportView.jpg)
 
 Home→ Table Icon.
+
+![Select Table Visual](images_dataShaping/SelectTableVisual.jpg)
+
 Confirm the Table visualization is selected.  Notice the New Visual Option will only appear after you click the Report View
 
 ![ClickFocusMode](images_dataShaping/ClickFocusMode.jpg)
@@ -220,7 +223,7 @@ Confirmed that visuals are working with cleaned and transformed data:
 
 
 ![Click Focus Mode](images_dataShaping/ClickFocusMode.jpg)
-![Select Table Visual](images_dataShaping/SelectTableVisual.jpg)
+
 ![Table Visual Result](images_dataShaping/TableVisualResult.jpg)
 
 ---
