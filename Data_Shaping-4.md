@@ -109,10 +109,13 @@ steps:
 ![Report view](images_dataShaping/clickREportView.jpg)
 
 Home→ Table Icon.
+Confirm the Table visualization is selected.  
+Notice the New Visual Option will only appear after you click the Report View
+
 
 ![Select Table Visual](images_dataShaping/SelectTableVisual.jpg)
 
-Confirm the Table visualization is selected.  Notice the New Visual Option will only appear after you click the Report View
+cick Focus Mode
 
 ![ClickFocusMode](images_dataShaping/ClickFocusMode.jpg)
 
