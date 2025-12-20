@@ -132,6 +132,7 @@ Confirm data on canvas:
 Customers: Customer Name
 Products:Product Name
 Date: Year, Month
+Click Back to Report
 
 
 ![BacktoREport](images_dataShaping/BacktoREport.jpg)
