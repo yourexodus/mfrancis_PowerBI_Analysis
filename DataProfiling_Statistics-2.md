@@ -62,7 +62,7 @@ This column is clean and ideal for simple filtering due to its low number of cat
 This is a **low-cardinality dimension** (4 distinct categories) with **perfect data quality**. The distribution is heavily skewed toward **Standard** shipping, which accounts for 61% of orders.
 
 #### **Image:**  
-![Shipping Method Distribution and Statistics in Power Query](images_profile/image_81927f.png)
+![Shipping Method Distribution and Statistics in Power Query](images_profile/ShippingMethod.jpg)
 
 ---
 
