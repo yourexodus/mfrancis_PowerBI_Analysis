@@ -1,32 +1,159 @@
-# Employment Trend Analysis: The 2025 Government Sector Shift
+# Government Employment Analysis (Power BI)
 
-## 📌 Project Overview
-This project focuses on translating raw employment data into a clear, high-impact narrative using Power BI. By applying data visualization best practices, I transformed a complex multi-series dataset into a focused "story" that highlights a critical anomaly in the Government sector while maintaining the context of the broader market.
+## Overview
+This project analyzes **U.S. government employment trends** using data from the Bureau of Labor Statistics (BLS). The focus is on **data preparation, time-series accuracy, and clear analytical storytelling** using Power BI.
 
-## 📊 The Data Story
-The primary visual utilizes a **Focus-Line Strategy** to guide the viewer's eye immediately to the most important insight.
-
-### Design Choices
-* **Selective Highlighting:** Used a muted grey palette for secondary industries (Mining, Hospitality, Trade) to provide "contextual noise" without distracting from the main story.
-* **Emphasis:** Used a bold, red dashed line for the **Government** sector to signal an area requiring immediate attention.
-* **Intentional Neutrality:** I intentionally avoided adding speculative annotations for the October 2025 dip. By presenting the "what" without assuming the "why," I maintain analytical integrity and provide a clean foundation for stakeholders to investigate further.
-
-## 📈 Key Insights
-* **Broad Market Stability:** From early 2024 through late 2025, most industries remained relatively flat, indicating a stable economic environment for the private sector.
-* **The Government Anomaly:** The Government sector showed a significant downward trend starting in mid-2025, culminating in a sharp "V-shaped" drop in October.
-* **Divergence:** This sector is the only one in the dataset to show this specific pattern of volatility, making it the primary focal point for this report.
-
-## 🛠️ Technical Workflow
-* **Tool:** Power BI
-* **Visual Type:** Line Chart
-* **Techniques:** * Series formatting for narrative focus.
-    * Dynamic labeling to ensure clarity at a glance.
-    * Data cleaning to align multiple industry timelines.
-
-## 🚀 Conclusion
-This report demonstrates that data storytelling isn't just about showing all the data—it's about highlighting the **right** data. By isolating the Government sector's unique behavior, this dashboard serves as a conversation starter for leadership to investigate specific policy or budget changes occurring in Q4 2025.
+This is not an interactive dashboard.  
+Instead, it documents the **step-by-step analytical process** used to build a correct and trustworthy visualization.
 
 ---
-**Developed by:** [Your Name]  
-**Date:** December 2025  
-**Domain:** Labor Market Analytics
+
+## Data Source
+- **Source:** U.S. Bureau of Labor Statistics (BLS)
+- **Method:** Web data connector in Power BI
+- **Frequency:** Monthly employment data
+- **Scope:** U.S. Government employment
+
+---
+
+## Step 1: Data Acquisition
+
+![Get Data from Web](images_laborStatistics/Getdata_web.jpg)
+
+Data was retrieved directly from the BLS website using Power BI’s **Web connector**.
+
+![Paste Website](images_laborStatistics/PasteWebSite.jpg)
+
+After pasting the source URL, the data preview was reviewed before loading.
+
+---
+
+## Step 2: Data Review & Initial Cleanup
+
+![Review Data](images_laborStatistics/ReviewSomeData.jpg)
+
+Initial inspection identified:
+- Unnecessary columns
+- Formatting inconsistencies
+- Month values requiring transformation
+
+![Select US Table](images_laborStatistics/SelectUsTableData.jpg)
+
+Only relevant U.S. employment data was retained.
+
+---
+
+## Step 3: Data Transformation (Power Query)
+
+![Transform Data](images_laborStatistics/ClickTransformData.jpg)
+
+Power Query was used to reshape and clean the dataset.
+
+![Use First Row as Headers](images_laborStatistics/UseFirstRowHeaders.jpg)
+
+Headers were promoted to ensure proper field names.
+
+![Unpivot Columns](images_laborStatistics/UnpivotColumns.jpg)
+
+Wide-format data was unpivoted to support time-series analysis.
+
+![Completed Transpose](images_laborStatistics/completedTranspose.jpg)
+
+Data structure was validated after transformation.
+
+---
+
+## Step 4: Date & Category Corrections
+
+![Rename Category Month](images_laborStatistics/RenameCategoryMonth.jpg)
+
+Month values were renamed for clarity.
+
+![Change Category to Month](images_laborStatistics/ChangeCategorytoMonth.jpg)
+
+Month fields were explicitly set for time-based analysis.
+
+![Use Month Date X Axis](images_laborStatistics/UseMonthDateXaxis.jpg)
+
+A proper date field was applied to the X-axis to prevent misordering.
+
+> Correct month sorting is critical. Even correct data can appear misleading if dates are not handled properly.
+
+---
+
+## Step 5: Building the Visualization
+
+![Build a Chart](images_laborStatistics/BuildAChart.jpg)
+
+A line chart was selected to show employment trends over time.
+
+![Select Line Chart](images_laborStatistics/SelectLineChart.jpg)
+
+Government employment was added as the primary value.
+
+![Sum of Government](images_laborStatistics/SumOfGovernment.jpg)
+
+Aggregation was verified to ensure **SUM**, not average.
+
+---
+
+## Step 6: Formatting & Visual Emphasis
+
+![Format Pane](images_laborStatistics/CickFormatPane.jpg)
+
+Formatting controls were used to guide viewer attention.
+
+![Select Government as Bold Red](images_laborStatistics/SelectGovernmentAsBoldRed.jpg)
+
+Government employment was emphasized using color and line weight.
+
+![Dashed Government Line](images_laborStatistics/FormatPaneDashedGovernment.jpg)
+
+Other series were visually muted to reduce noise.
+
+![Turn Off Data Labels](images_laborStatistics/TurnDatalabelsOFF.jpg)
+![Show Government Labels Only](images_laborStatistics/ShowForSeriesLabelGovernment.jpg)
+
+Labels were applied selectively to improve readability.
+
+---
+
+## Step 7: Key Observation
+
+![Final Graph](images_laborStatistics/FinalGraph.jpg)
+
+A noticeable decline appears from **September to October**, followed by a **November rebound**.
+
+![November Rebound](images_laborStatistics/NovemberRebound.jpg)
+
+### Interpretation Notes
+- This does **not automatically indicate layoffs**
+- Possible explanations include:
+  - End-of-fiscal-year adjustments
+  - Temporary hiring pauses
+  - Budget timing effects
+
+Contextual analysis is required before drawing conclusions.
+
+---
+
+## Skills Demonstrated
+- Power BI data shaping
+- Power Query transformations
+- Time-series accuracy
+- Visual storytelling
+- Responsible labor data interpretation
+
+---
+
+## Portfolio Context
+This project demonstrates my ability to:
+- Clean and reshape real-world labor data
+- Correct common visualization mistakes
+- Explain trends without overstatement
+- Communicate findings clearly and professionally
+
+---
+
+## Repository
+`mfrancis_PowerBI_Analysis`
