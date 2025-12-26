@@ -178,14 +178,15 @@ Titles and explanatory text were added to improve interpretation.
 ---
 
 ## Step 11: Final Result & Key Observation
+![November Rebound](images_laborStatistics/NovemberRebound.jpg)
 
-![Final Graph](images_laborStatistics/FinalGraph.jpg)
 
 The final visualization shows:
 - A **decline from September to October**
 - A **rebound in November**
 
-![November Rebound](images_laborStatistics/NovemberRebound.jpg)
+
+![Final Graph](images_laborStatistics/FinalGraph.jpg)
 
 ### Interpretation
 This decline does **not automatically indicate layoffs**.  
