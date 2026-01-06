@@ -80,43 +80,99 @@ Formatted measures improve readability and business interpretation.
 
 📁 Images: `images_charting/`  
 
-**Purpose:** Demonstrates axis assignment, measure layering, and formatting for clear trend analysis.  
+**Purpose:** Demonstrates axis assignment, measure layering, formatting, and interactive sorting for clear trend analysis.  
+
+**Step-by-Step Visual Build:**
+
+1. **Add Profit Measure to Value**
+![Add Profit to Value](images_charting/AddProfittoValue.jpg)
+
+2. **Create & Build Scatter Chart**
+![Build Scatter Chart](images_charting/BuildScatterChart.jpg)  
+![Create Scatter Chart](images_charting/CreateScatterChart.jpg)
+
+3. **Adjust Bubble Size & Final Graph**
+![Increase Bubble Size](images_charting/Increasebubblesize.jpg)  
+![Final Graph Scatter Chart](images_charting/FinalGraphScatterChart.jpg)
+
+4. **Apply Tooltip Interactivity**
+![Create Tooltip](images_charting/CreateTooltip.jpg)  
+![Current Sales & Profit Tooltip](images_charting/CurrentSalesProfitToolTip.jpg)  
+![Update Tooltips](images_charting/UpdateTooltips.jpg)  
+![Tooltip Applied](images_charting/TooltipApplied.jpg)
+
+5. **Sort Categories & Profit**
+![Sort Category Ascending](images_charting/SortCategoryAscending.jpg)  
+![Sort Region Ascending](images_charting/SortRegionAscendintg.jpg)  
+![Sort by Sum of Profit](images_charting/SortBySumOfProfit.jpg)  
+![After Category Sorted](images_charting/AfterCategorySorted.jpg)  
+![After Profit Sort](images_charting/AfterProfitSort.jpg)
 
 ---
 
-### 2️⃣ Suggested Visual: Sales by Product and Category
-- **Y-Axis:** Product  
-- **X-Axis:** Sum of Sales  
-- **Legend:** Category  
-
-![Sales by Product and Category](images_DAX/sales_by_product_category.jpg)  
-📁 Images: `images_DAX/`  
-
-**Purpose:** Shows Power BI’s **Suggested visual** feature, highlighting top-performing products and category distribution.  
-
----
-
-## 🖼 Visual Construction Process
-Steps to build and enhance visuals:
-
-1. **Stacked Bar Chart Construction**  
-![Click stacked bar chart](images_DAX/ClickStackedBarChart.jpg)  
-![Build stacked bar chart](images_DAX/BuildStackedBarchart.jpg)  
-
-2. **Add Measures to Create Combo Chart**  
-![Sales Profit Cost graph build](images_DAX/SalesProfitCostGraphBuild.jpg)  
-
-3. **Final Dashboard Output**  
-![Post dashboard](images_DAX/PostDashboard.jpg)  
+### 2️⃣ Map Visuals & Geospatial Insights
+- **Enable Map Feature**  
+![Turn On Map Feature](images_charting/TurnOnMapFeature.jpg)  
+![Enable Map Click Apply](images_charting/EnableMapClickApply.jpg)  
+![Click Create Map](images_charting/ClickCreateMap.jpg)  
+- **Add Borders & Final Formatting**  
+![Turn On Border](images_charting/TurnOnBorder.jpg) | ![View Borders](images_charting/ViewBorders.jpg)  
+- **Final Maps**
+![Final Map with Tooltip](images_charting/FinalMapwithTooltip.jpg)  
+![Final Map by Category and Region](images_charting/finalMapByCategoryAndREgion.jpg)  
+- **Error Handling**  
+![Map Error](images_charting/MapError.jpg)
 
 ---
 
-## 🧮 DAX & Measures Notes
-- Sales and Profit aggregated using **implicit measures** (Sum)  
-- Measure placement affects visual behavior (X/Y-axis roles)  
-- Formatting options vary by visual type and UI version  
+### 3️⃣ Line & Stacked Column Charts
+- **Line and Clustered Column Construction**
+![Home Line Stacked Column Chart](images_charting/HomeLineStackedColumnChart.jpg)  
+![Line Stacked Chart Data 3 Tables](images_charting/LIneStackedChartData3Tables.jpg)  
+![Finished Line Stacked Column Chart](images_charting/FinishedLineStackedColumnChart.jpg)  
+![Completed Stacked Column Chart](images_charting/CompletedStackedColumnChart.jpg)
 
-> Highlights the importance of understanding **semantic model behavior**, even without custom DAX.
+---
+
+### 4️⃣ Gauge & Target Visuals
+![Click Gauge](images_charting/ClickGauge.jpg)  
+![Finished Gauge Visual](images_charting/FinishedGaugeVisual.jpg)  
+![Enter Target 120000](images_charting/EnterTarget120000.jpg)
+
+---
+
+### 5️⃣ Infographics & AppSource Visuals
+![AppSource Visuals](images_charting/AppSourceVisuals.jpg)  
+![New Infographic Visual](images_charting/NewInfographicVisual.jpg)  
+![Search Infographic Designer](images_charting/SearchInfoGraphicDesigner.jpg)  
+![Click Infographic Designer](images_charting/clickInfographicDesigner.jpg)  
+![Info Designer So Far](images_charting/infoDesignerSoFar1.jpg)  
+
+---
+
+### 6️⃣ Customization & Final Touches
+- **Color Palettes & Contrast**
+![Select Color Blind Safe Palette](images_charting/SelectColorBlindSafe.jpg)  
+![Expand Colors](images_charting/expandcolors.jpg)  
+![More Contrast](images_charting/morecontrast.jpg)
+
+- **Resize, Update Titles & Integration**
+![Resize Completed Visuals](images_charting/resizeCompleted.jpg)  
+![Select Light Blue](images_charting/selectLightBlue.jpg)  
+![Update Title](images_charting/updateTitle.jpg)  
+![Integration Settings](images_charting/Integrationsettings.jpg)
+
+---
+
+### 7️⃣ Final Dashboard Outputs
+- **Total by Region, Category, SubCategory**
+![Total by Region, Category, SubCategory](images_charting/TotalbyRegionCatSubCat.jpg)  
+- **Final Shipping Cost by Category & Region**
+![Final Shipping Cost](images_charting/FinalShippingcostforEachCategorybyRegion.jpg)  
+- **Interactions**
+![After Clicking Boat](images_charting/afterclickBoat.jpg)  
+![Click Shape](images_charting/clickShape.jpg)  
+![Click Transportation Boat](images_charting/clickTransportationBoat.jpg)  
 
 ---
 
@@ -131,7 +187,9 @@ Full walkthrough with explanations and visuals:
 3. Format measures  
 4. Build base visuals (Sales & Profit combo)  
 5. Refine titles, sort orders, and formatting  
-6. Publish and interpret results  
+6. Add map & tooltip interactivity  
+7. Integrate gauges, line/stacked columns, and infographics  
+8. Publish and interpret results  
 
 ---
 
@@ -149,11 +207,3 @@ Data Analyst | Business Intelligence | Analytics
 
 🌐 Portfolio: [yourexodus.github.io/MarlainnaTheAnalyst](https://yourexodus.github.io/MarlainnaTheAnalyst/)  
 🐙 GitHub: [github.com/yourexodus](https://github.com/yourexodus)  
-
----
-
-✅ **Notes:**  
-Organized images and screenshots follow real-world analytics documentation conventions:  
-
-- `images_charting/` → Combo charts & formatting  
-- `images_DAX/` → Suggested visuals & field exploration  
