@@ -87,4 +87,4 @@ Use the **Infographic Designer** from AppSource to create visually engaging elem
 Data Analyst | Business Intelligence | Analytics  
 
 🌐 Portfolio: [yourexodus.github.io/MarlainnaTheAnalyst](https://yourexodus.github.io/MarlainnaTheAnalyst/)  
-🐙 GitHub: [github.com/yourexodus](https://github.com/yourexodus)
+
