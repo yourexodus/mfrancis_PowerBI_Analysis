@@ -1,96 +1,101 @@
-# Module 1: The Power BI Sales & Profit Masterclass
+# Power BI Sales & Profit Masterclass
 **Subtitle:** A Step-by-Step Guide to Professional Data Storytelling & DAX  
-**Author:** Marlainna Francis
+**Author:** Marlainna Francis  
+
+---
+
+## 🎯 Learning Objectives
+By completing this project, you will be able to:  
+- Transform raw sales data into a professional, recruiter-ready dashboard  
+- Create and implement profitability calculations  
+- Build engaging reports using advanced Power BI visuals and infographics  
+- Apply accessibility best practices for executive-friendly dashboards  
 
 ---
 
 ## 1. Introduction: The Business Case
-In this project, we transform raw sales data into a recruiter-ready dashboard. We don’t just build charts; we solve business problems by analyzing profit margins, regional growth, and product performance.
+This project focuses on solving real business problems, not just building charts. You’ll analyze profit margins, regional growth, and product performance to deliver actionable insights.
 
-**Project Goals:**
-- Master the Modern Power BI UI (On-object interaction)
-- Write and implement DAX Calculated Fields
-- Design for Accessibility using Colorblind Safe themes
-- Deploy Advanced Visuals (Infographic Designer & Geospatial Maps)
+**Project Goals:**  
+- Master the Modern Power BI UI (On-object interaction)  
+- Implement calculated fields for profitability  
+- Design for Accessibility using Colorblind Safe themes  
+- Deploy Advanced Visuals (Infographics & Geospatial Maps)  
 
 ---
 
-## 2. Technical Foundation: Data Modeling & DAX
-
+## 2. Technical Foundation: Data Modeling & Profitability
 ### Step 1: Field Validation
-We start by validating the Products table to ensure data integrity.
+Validate the Products table to ensure data integrity before analysis.
 
 ![View Products Table](images_DAX/ViewProducttableView.jpg)
 
-### Step 2: DAX Logic for Profitability
-To understand the business's bottom line, we create a custom **Cost** measure:
-
-**Logic:** `Cost = [Sales] - [Profit]`  
-**Format:** All financial fields are set to Currency ($) to ensure business readiness.
-
-![Cost Formula](images_DAX/CostFormula.jpg)
+### Step 2: Profitability Calculations
+Create custom measures to analyze the business’s bottom line. For example, you can calculate **Cost** by subtracting **Profit** from **Sales**. All financial fields are formatted as Currency ($) for professional output.
 
 ---
 
 ## 3. The Visualization Suite
 
 ### A. Performance Tracking (Combo Charts)
-We use a Line and Clustered Column Chart to compare **Sales vs. Profit**.
+Compare **Sales vs. Profit** using a Line and Clustered Column Chart.
 
-**Insight:** By sorting by **Sum of Profit**, we immediately identify which subcategories are "Revenue Leaders" vs. "Profit Drainers."
+**Insight:** Sorting by **Sum of Profit** highlights revenue leaders vs. profit drainers.
 
 ![Combo Chart - Sales vs Profit](images_charting/AfterProfitSort.jpg)
 
 ### B. Geospatial Intelligence (Map Visuals)
-We enabled the map feature to visualize **regional performance**.
+Visualize **regional performance** on a map.
 
-**Pro Tip:** Custom Tooltips reveal detailed breakdowns of Category sales when hovering over a state without cluttering the dashboard.
+**Pro Tip:** Custom tooltips display category-level sales without cluttering the dashboard.
 
 ![Final Map with Tooltip](images_charting/FinalMapwithTooltip.jpg)
 
 ### C. Executive Overviews (Gauge & Targets)
-Set a **Profit Target** of $120,000. The Gauge visual provides an instant "Red/Green" status on company goals.
+Set a **Profit Target** of $120,000. Gauge visuals instantly communicate performance status.
 
 ![Enter Profit Target](images_charting/EnterTarget120000.jpg)
 
 ---
 
 ## 4. Advanced Design: Infographics & UX
-Use the **Infographic Designer** from AppSource to create visually engaging elements.
+Use the **Infographic Designer** to create visually engaging elements.
 
-**The "Boat" Visual:** Transportation icons represent shipping costs, making the data intuitive.
+**Example:** "Boat" icons represent shipping costs intuitively.
 
 ![Click Transportation Boat](images_charting/clickTransportationBoat.jpg)
 
 ---
 
 ## 5. Final Polish & Professional Standards
-
-**Accessibility:** Applied a **Colorblind Safe Palette** to ensure the dashboard is usable for all executives.  
-**Layout:** Used gridlines for symmetrical spacing and alignment.  
-**Final Output:** A cohesive, single-page dashboard tracking **Total Sales by Region, Category, and SubCategory**.
+- **Accessibility:** Colorblind Safe Palette ensures usability for all executives  
+- **Layout:** Gridlines create symmetry and alignment  
+- **Final Output:** Single-page dashboard tracking **Total Sales by Region, Category, and SubCategory**
 
 ![Total Sales by Region, Category, SubCategory](images_charting/TotalbyRegionCatSubCat.jpg)
 
 ---
 
 ## 6. Key Takeaways
-- Visual field placement directly impacts formatting options  
-- Power BI’s **Suggested visuals** accelerate exploratory analysis  
-- UI updates require adaptability when following older guides  
-- Structured documentation enhances portfolio credibility  
+- Strategic field placement affects formatting and readability  
+- Power BI’s suggested visuals accelerate exploratory analysis  
+- Staying current with UI updates ensures professional-quality reports  
+- Structured documentation boosts portfolio credibility  
 
 ---
 
-## 7. Author
+## 7. Wrap-Up
+You now have a **complete, recruiter-ready Power BI dashboard** suitable for portfolio inclusion or business use.
+
+---
+
+## 8. Buy Now
+Take the course today and master Power BI with real-world projects!  
+
+**[👉 Buy Now on Gumroad](https://marlainna.gumroad.com/l/owksat)**  
+
+---
+
+## 9. Author
 **Marlainna Francis**  
-Data Analyst | Business Intelligence | Analytics  
-
-🌐 Portfolio: [yourexodus.github.io/MarlainnaTheAnalyst](https://yourexodus.github.io/MarlainnaTheAnalyst/)  
-
----
-
-## 🎯 Get Instant Access
-👉 **Enroll here:**  
-[https://marlainna.gumroad.com/l/owksat](https://marlainna.gumroad.com/l/owksat)
-
+Data Analyst | Business Intelligence | Analytics 
