@@ -88,3 +88,9 @@ Data Analyst | Business Intelligence | Analytics
 
 🌐 Portfolio: [yourexodus.github.io/MarlainnaTheAnalyst](https://yourexodus.github.io/MarlainnaTheAnalyst/)  
 
+---
+
+## 🎯 Get Instant Access
+👉 **Enroll here:**  
+[https://marlainna.gumroad.com/l/owksat](https://marlainna.gumroad.com/l/owksat)
+
