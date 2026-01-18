@@ -90,9 +90,13 @@ You now have a **complete, recruiter-ready Power BI dashboard** suitable for por
 ---
 
 ## 8. Buy Now
-Take the course today and master Power BI with real-world projects!  
+Take the course today and master Power BI with this real-world projects!  
 
-**[👉 Buy Now on Gumroad](https://marlainna.gumroad.com/l/owksat)**  
+**[👉 Buy Now on Gumroad](https://marlainna.gumroad.com/l/owksat)** 
+
+
+![Final Project](images_DAX/FinalProject.jpg)
+ 
 
 ---
 
