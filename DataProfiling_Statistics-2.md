@@ -1,54 +1,62 @@
 # 📊 Data Profiling & Statistics (Step 2)
 
 ## 📌 Overview
-After loading and reformatting the initial dataset, the next critical phase in the ETL pipeline is **Data Profiling and Statistical Assessment**. This step ensures data quality, identifies missing or anomalous values, checks column distributions, and verifies dataset integrity prior to building custom functions and applying advanced data shaping.
+After connecting the initial source data, the next critical phase in the ETL pipeline is **Data Profiling, Quality Assessment, and Structure Inspection**. This step evaluates missing values, verifies structural alignment across columns, and cleans unformatted raw headers before applying advanced transformations.
 
 ---
 
-## 🛠️ Key Profiling & Assessment Steps
+## 🛠️ Key Profiling & Data Quality Steps
 
-### 1️⃣ Column Quality & Completeness
-- Enabled Power Query's built-in **Column Quality** metrics to evaluate data validity.
-- Audited each column for:
-  - **Valid %**: Percentage of correctly parsed and typed records.
-  - **Error %**: Percentage of corrupted data or conversion failures.
-  - **Empty %**: Percentage of null or missing values.
+### 1️⃣ Initial Data Source & Navigator Assessment
+- Evaluated the incoming Excel worksheet structures (`MyFootprintSports.xlsx`) prior to loading.
+- Identified unformatted metadata rows (`Report generated in January 2024.`) and unassigned column names (`Column2`, `Column3`, `Column4`).
 
-![Column Quality and Health Check](./images/YOUR_COLUMN_QUALITY_IMAGE_NAME.jpg)
-*Figure 2.1: Column Quality view displaying valid, error, and empty percentages across dataset fields.*
+![Navigator Preview](./images/PreviewSaleRepData.jpg)
+*Figure 2.1: Initial preview of raw data structure in the Power Query Navigator.*
 
 ---
 
-### 2️⃣ Column Value Distribution & Uniqueness
-- Activated **Column Distribution** tools to inspect value patterns and uniqueness.
-- Assessed cardinality across key dimensions:
-  - **Distinct Values**: Total count of unique elements per column.
-  - **Unique Values**: Values that appear exactly once in the column.
-- Identified potential duplicate records and unexpected text variations.
+### 2️⃣ Query Structure & Metadata Cleanup
+- Profiled the initial table state in Power Query Editor to identify non-data rows and null fields.
+- Removed top administrative header rows to align the real table headers.
 
-![Column Value Distribution](./images/YOUR_COLUMN_DISTRIBUTION_IMAGE_NAME.jpg)
-*Figure 2.2: Column Distribution histogram showing unique vs. distinct count profiles.*
+![Power Query Editor Initial View](./images/PowerQueryDataisReadytobeEdited.jpg)
+*Figure 2.2: Identifying null values and misplaced header rows in the query editor.*
+
+![Remove Top Rows Transformation](./images/RemoveTop2.jpg)
+*Figure 2.3: Removing top non-data rows to clean table boundaries.*
 
 ---
 
-### 3️⃣ Descriptive Statistics & Data Profiling
-- Leveraged the **Column Profile** pane for deep statistical analysis on numeric and date fields.
-- Analyzed descriptive statistics including:
-  - **Minimum & Maximum** boundary values.
-  - **Average / Mean** measure distributions.
-  - **Null & Zero Count** counts for business logic validation.
-- Validated that historical date ranges and numeric ranges align with reporting requirements.
+### 3️⃣ Column Parsing & Delimiter Profiling
+- Assessed composite text values inside the `Sales Rep` column (`Region-Name` format).
+- Used delimiter profiling to split attributes cleanly into dedicated `Region` and `Sales Rep Name` columns.
 
-![Column Profile Statistics](./images/YOUR_COLUMN_PROFILE_IMAGE_NAME.jpg)
-*Figure 2.3: Detailed summary statistics and descriptive profile for individual dataset fields.*
+![Split Column by Delimiter Dialogue](./images/SplitColumnDelimiterDialogueBoxAutoSelected.jpg)
+*Figure 2.4: Configuring text delimiter splitting based on hyphenated rep identifiers.*
+
+![Completed Delimiter Split](./images/RowsAfterSplitcompleted.jpg)
+*Figure 2.5: Resulting isolated Region and Sales Rep columns.*
+
+---
+
+### 4️⃣ Data Unpivoting & Final Validation
+- Transformed wide monthly date columns into a normalized columnar layout using the **Unpivot Columns** feature.
+- Applied correct data types across all fields (`Date`, `Text`, `Whole Number`) and conducted a final visual audit of row values.
+
+![Unpivoting Wide Columns](./images/Unpivotcolumns.jpg)
+*Figure 2.6: Unpivoting monthly sales columns into flat relational attribute rows.*
+
+![Final Cleaned Dataset Review](./images/FinalReview.jpg)
+*Figure 2.7: Final inspection of cleaned, typed, and structured fields.*
 
 ---
 
 ## 📈 Outcomes & Summary Findings
 
-- **Data Integrity Verified**: Confirmed zero critical errors across key date, sales representative, and region attributes.
-- **Anomalies Highlighted**: Flagged missing entries and extreme values for handling during downstream custom transformations.
-- **Model Readiness**: Ensured columns are prepared for schema alignment, custom M function processing, and DAX metric calculation.
+- **Data Quality Verified:** Successfully removed redundant metadata rows and addressed null values.
+- **Normalized Schema:** Converted wide cross-tabulated date columns into a structured tall dataset.
+- **Pipeline Ready:** Ensured clean schema formatting before moving into custom function development and modeling.
 
 ---
 
