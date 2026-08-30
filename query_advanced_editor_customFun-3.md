@@ -11,61 +11,91 @@
 ## 🛠️ Step-by-Step Execution & Breakdown
 
 ### 1️⃣ Advanced Editor & Base Code Setup
-* **Opening the Script:** Accessed the Advanced Editor from the **View** ribbon to inspect the raw `let ... in` M structure for the `Sales Orders` query.
-* **Manual Logic Entry:** Hand-coded an inline `Table.AddColumn` step using `if/else` conditions to classify orders into "Premium", "High", "Mid", and "Low" tiers based on sales volume.
-* **Validation:** Reordered the new `SalesTier` column next to the numerical `Sales` column to verify output correctness in the data grid.
 
+To review and modify the raw M transformations, open the **View** ribbon tab and select **Advanced Editor** to open the M script window.
 ![Click Advanced Editor](images_advancedEditor/click_advancededitor.jpg)
+
+Before adding custom logic, inspect the original `let ... in` code structure of the `Sales Orders` query to identify where to insert custom transformations.
 ![Before Custom Tiers Code](images_advancedEditor/BeforeProduct_Tiers.jpg)
+
+Hand-code an inline `Table.AddColumn` step using `if/else` logic to assign "Premium", "High", "Mid", and "Low" sales tiers directly inside the Advanced Editor.
 ![Code After Sales Tiers Update](images_advancedEditor/CodeAfterSalesTiersUpdate.jpg)
+
+Save and exit the editor to verify that the newly generated `SalesTier` column appears alongside the numeric `Sales` column in the data grid.
 ![Grid View After Sales Tiers Update](images_advancedEditor/AfterSalesTiersUpdate.jpg)
 
 ---
 
 ### 2️⃣ Custom Function Construction (`fnSalestier`)
-* **Creating Blank Query:** Navigated to **Home** > **New Source** > **Blank Query** to construct a standalone query container.
-* **Writing the Function Signature:** Used M code in the Advanced Editor to define a function accepting a decimal parameter (`Sales as nullable number`) and returning the matching tier string.
-* **Naming and Storing:** Saved the query object as `fnSalestier` in the query pane for global reuse.
 
+To build a central reusable custom function, navigate to **Home** > **New Source** > **Blank Query** to initialize a new query object.
 ![Home Blank Query](images_advancedEditor/Home_BlankQuery.jpg)
+
+Open the Advanced Editor for the blank query and write the parameter definition `(Sales as nullable number)` along with the conditional M tiering script.
 ![Function Sales Tier Definition](images_advancedEditor/Function_SalesTier.jpg)
+
+Rename and save the new query object as `fnSalestier` in the left Query Pane for cross-query access.
 ![Save Custom Function](images_advancedEditor/saveMyFunction.jpg)
 
 ---
 
 ### 3️⃣ Function Testing & Invocation
-* **Parameter Testing:** Verified the function logic independently by inputting static test values into the function interface to confirm accurate output generation.
-* **Invoking on Query:** Returned to the primary dataset, navigated to **Add Column** > **Invoke Custom Function**, and selected `fnSalestier`.
-* **Parameter Mapping:** Configured the input mode from static text to **Column Name**, mapping the function parameter directly to the `Sales` decimal field.
 
+Before applying the custom function across datasets, input static numbers into the parameter input UI to verify that the function returns correct tier strings.
 ![Testing Parameter Value](images_advancedEditor/Testingparameter.jpg)
+
+Review the standalone test output screen to confirm the custom function resolves the test values accurately.
 ![Invoked Function Test Output](images_advancedEditor/InvokedFunction.jpg)
+
+Return to the `Sales Orders` dataset, open the **Add Column** tab, and select **Invoke Custom Function**.
 ![Select Custom Column Dialog](images_advancedEditor/SelectCustomColumn.jpg)
+
+In the Invoke Custom Function dialog box, choose `fnSalestier` from the function dropdown menu.
 ![Select Function Name](images_advancedEditor/SelectCustomerFunction.jpg)
+
+Verify that the expected decimal parameter type matches the data type of the underlying target field.
 ![Check Decimal Parameter Type](images_advancedEditor/checkDecimalValue.jpg)
+
+Toggle the input setting from static text entry to **Column Name**, mapping the parameter directly to the `Sales` column.
 ![Select Sales as Parameter](images_advancedEditor/SelectSaleAsParameter.jpg)
+
+Click **OK** to run the function and create the calculated custom column within the query environment.
 ![Invoke Custom Function Final Step](images_advancedEditor/invoke_fn_Salestier.jpg)
 
 ---
 
 ### 4️⃣ Output Parity & Cross-Table Scaling
-* **Cross-Checking Results:** Placed the direct inline column (`SalesTier`) side-by-side with the custom function result (`SalesTier_fn`) to confirm 100% data parity.
-* **Scaling to Historical Tables:** Applied the same transformation pattern to secondary historical tables (such as `Sales Orders2019-2020`) using M code re-use, eliminating the need to rebuild steps manually from the GUI.
 
+Compare the direct inline calculated column `SalesTier` with the function-generated column `SalesTier_fn` side-by-side to ensure complete data parity.
 ![Comparing Inline vs Custom Function Values](images_advancedEditor/compareValues.jpg)
+
+Inspect the finalized query M code script showing both the inline conditional steps and the invoked function steps combined.
 ![Full M Script with Invoked Steps](images_advancedEditor/ApplySubsequentsteps.jpg)
+
+Copy the custom M code block using text editing techniques to easily port transformations across secondary queries.
 ![Find and Replace M Code Scripting](images_advancedEditor/Copy_replace.jpg)
+
+Paste the custom transformation logic directly into the Advanced Editor of secondary historical datasets like `Sales Orders2019-2020`.
 ![Add Code to Second Table](images_advancedEditor/AddCodeCodetoSalesOrder2ndtable.jpg)
+
+Check the data grid of the secondary table to confirm that the tiered calculations resolved correctly without recreating steps manually.
 ![Result 2nd Table Preview](images_advancedEditor/Result_2ndTable.jpg)
+
+Execute a preview refresh across the Power Query Editor to ensure all table dependencies evaluate cleanly.
 ![Refresh Preview](images_advancedEditor/RefreshPreview.jpg)
 
 ---
 
 ### 5️⃣ Data View & Model Finalization
-* **Data Type Formatting:** Converted the `Sales` column to **Decimal Number** (formatted to 2 decimal places) in the Power BI Desktop Data View to ensure proper presentation.
-* **Fields Pane Verification:** Confirmed that the new calculated custom function columns loaded seamlessly into the Desktop Fields Pane for use in visuals and downstream reporting.
 
+Switch to the Power BI Desktop Data View to update the `Sales` column formatting to **Decimal Number** with 2 decimal places.
 ![Converting Sales Column to Decimal in Data View](images_advancedEditor/ConvertSalesToDecimal.jpg)
+
+Verify that the newly created custom function column appears under the correct table within the Power BI Desktop Fields pane.
 ![View New Column in Power BI Data Pane](images_advancedEditor/DataPane_newColumn.jpg)
+
+Confirm that the calculated attribute is fully loaded into the report dataset view and ready for visual analysis.
 ![Verify Field List Display](images_advancedEditor/ViewNewColumninPBI.jpg)
+
+Perform a final validation check across secondary related tables to ensure calculated attributes integrate cleanly throughout the data model.
 ![Loan New Column Check](images_advancedEditor/loanNewColumn.jpg)
