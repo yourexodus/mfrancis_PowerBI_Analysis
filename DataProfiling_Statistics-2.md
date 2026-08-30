@@ -11,10 +11,10 @@ After establishing initial data connections and completing basic header transfor
 - Navigated to the **View** tab in Power Query Editor to enable **Column Quality**, **Column Distribution**, and **Column Profile** features.
 - Switched the profiling scope from the default top 1,000 rows to **Column profiling based on entire dataset** in the status bar to guarantee statistical accuracy across all 1,828 records.
 
-![Selecting Profiling Views](./images_laborStatistics/SelectColumnProfile.jpg)  
+![Selecting Profiling Views](./images_profile/SelectColumnProfile.jpg)  
 *Figure 2.1: Enabling Data Profiling views in Power Query Editor.*
 
-![Profiling Entire Dataset](./images_laborStatistics/ProfileEntireDataSet.jpg)  
+![Profiling Entire Dataset](./images_profile/ProfileEntireDataSet.jpg)  
 *Figure 2.2: Expanding profiling scope to analyze all dataset records.*
 
 ---
@@ -26,13 +26,13 @@ After establishing initial data connections and completing basic header transfor
   - `Product ID`: Contains **256 distinct values** and **21 unique values** (values appearing exactly once) across 1,828 rows.
   - `Order Date`: Contains **552 distinct dates** spanning from `1/3/2021` to `12/31/2023`, with an average date distribution centered around `8/6/2022`.
 
-![Product ID Uniqueness Profiling](./images_laborStatistics/ClickProductID.jpg)  
+![Product ID Uniqueness Profiling](./images_profile/ClickProductID.jpg)  
 *Figure 2.3: Initial uniqueness and distinct value assessment for Product ID.*
 
-![Detailed Product ID Statistics](./images_laborStatistics/ProductIDStatistics.jpg)  
+![Detailed Product ID Statistics](./images_profile/ProductIDStatistics.jpg)  
 *Figure 2.4: Comprehensive column statistics and value distribution tree for Product ID.*
 
-![Date Statistics Profile](./images_laborStatistics/DateStatistics.jpg)  
+![Date Statistics Profile](./images_profile/DateStatistics.jpg)  
 *Figure 2.5: Temporal distribution and key metric summary for Order Date.*
 
 ---
@@ -45,10 +45,10 @@ After establishing initial data connections and completing basic header transfor
   - **Range:** Minimum sale of `$2.99` up to a maximum sale of `$899.879`.
   - **Distribution:** Identified significant value skewness, where the single most frequent sales price point (`$119.95`) accounts for **47 rows (2%)** of total volume.
 
-![Selecting Sales Column for Profiling](./images_laborStatistics/ClickSalesColumn.jpg)  
+![Selecting Sales Column for Profiling](./images_profile/ClickSalesColumn.jpg)  
 *Figure 2.6: Selecting numerical metric columns for descriptive statistical breakdown.*
 
-![Sales Value Skew and Frequency](./images_laborStatistics/FortySevenPercentsales.jpg)  
+![Sales Value Skew and Frequency](./images_profile/FortySevenPercentsales.jpg)  
 *Figure 2.7: Statistical range and high-frequency value peaks within Sales.*
 
 ---
@@ -59,17 +59,17 @@ After establishing initial data connections and completing basic header transfor
   - Analyzed individual item row counts using the value distribution histogram.
   - Identified `SP-S-6604` as the top product line by transaction volume, representing **64 total rows (3%)** of the overall dataset.
 
-![Top Volume Product Identification](./images_laborStatistics/MaxProduct.jpg)  
+![Top Volume Product Identification](./images_profile/MaxProduct.jpg)  
 *Figure 2.8: Frequency distribution highlighting top transaction product IDs.*
 
-![Product with Maximum Rows Details](./images_laborStatistics/ProductWithMaxNbrRows.jpg)  
+![Product with Maximum Rows Details](./images_profile/ProductWithMaxNbrRows.jpg)  
 *Figure 2.9: Focused breakdown of peak transaction volume for product SP-S-6604.*
 
 - **Low-Frequency & Tail Items:**
   - Examined low-occurrence product entries to check for potential data fragmentation or orphaned SKUs.
   - Filtered items at the low end of the spectrum (such as `FW-Y-4233`), each accounting for **10 rows (< 1%)**.
 
-![Low Volume Tail Profiling](./images_laborStatistics/LeastNumberOfRows10.jpg)  
+![Low Volume Tail Profiling](./images_profile/LeastNumberOfRows10.jpg)  
 *Figure 2.10: Identifying low-frequency records and tail distributions.*
 
 ---
