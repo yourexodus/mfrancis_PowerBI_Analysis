@@ -76,6 +76,9 @@ https://github.com/yourexodus/mfrancis_PowerBI_Analysis/blob/main/Data_Shaping-4
 ---
 
 ## 📈 Outcome
+📄 Documentation:  
+https://github.com/yourexodus/mfrancis_PowerBI_Analysis/blob/main/Outcome_FinalDataDelivery.md
+
 The final datasets are:
 - Cleaned and standardized  
 - Profiled for quality assurance  
