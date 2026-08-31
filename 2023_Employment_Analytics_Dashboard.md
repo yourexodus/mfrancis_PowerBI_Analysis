@@ -5,13 +5,21 @@
 ---
 
 ## 🔍 Project Overview
-This project analyzes **U.S. employment trends from May–July 2023**, with a focus on identifying sector-level outliers. Through iterative visual development and data modeling, the **Government sector** was identified as a significant deviation from broader economic patterns.
+This project analyzes sales performance using Microsoft Power BI, with a focus on exploring sales trends across time, products, categories, subcategories, and regions.
 
+The project documents the development process from data import and exploration through visualization, data modeling, troubleshooting, and final dashboard refinement.
+
+Rather than showing only the finished report, the project captures the iterative process used to build and improve the dashboard.
 ---
 
 ## 🎯 Business Question
-**Which employment sector experienced abnormal short-term growth in mid-2023, and how did it compare to overall economic trends?**
+The dashboard was developed to explore:
 
+How sales change over time
+How sales vary across regions
+Which product categories and subcategories are represented in the sales data
+How different visualizations can be used to analyze sales performance
+How sales information can be presented in an interactive business dashboar
 ---
 
 ## 🛠 Tools & Technologies
