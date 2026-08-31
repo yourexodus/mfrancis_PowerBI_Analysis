@@ -99,11 +99,7 @@ The helper column was used with **Sort by Column** and then hidden for a clean d
 ![Final Clustered Graph](images_visuals/finalClusteredGraph.jpg)
 
 ---
-
-## 📌 Final Dashboard
-![Finished Report](images_visuals/FinshedReport.jpg)
-
----
+ 
 
 ## 💡 Key Insights
 - Government employment showed **isolated volatility**, diverging from all other sectors  
