@@ -15,11 +15,11 @@ Rather than showing only the finished report, the project captures the iterative
 ## 🎯 Business Question
 The dashboard was developed to explore:
 
-How sales change over time
-How sales vary across regions
-Which product categories and subcategories are represented in the sales data
-How different visualizations can be used to analyze sales performance
-How sales information can be presented in an interactive business dashboar
+- How sales change over time
+- How sales vary across regions
+- Which product categories and subcategories are represented in the sales data
+- How different visualizations can be used to analyze sales performance
+- How sales information can be presented in an interactive business dashboar
 ---
 
 ## 🛠 Tools & Technologies
