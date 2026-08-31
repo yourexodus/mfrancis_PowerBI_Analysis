@@ -81,7 +81,7 @@ Applying custom Hex theme properties (`#F4F4F4`) to filter panes and visual cont
 
 The project logo and complete folder directory cataloging step-by-step UI captures and model audit records:
 
-![Footprint Sports Logo](images_charting/My_footprint_sports_logo.png)
+![Footprint Sports Logo](images_charting/resizeCompleted.jpg)
 
 ---
 
