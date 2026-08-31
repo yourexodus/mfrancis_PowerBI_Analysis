@@ -79,9 +79,9 @@ Applying custom Hex theme properties (`#F4F4F4`) to filter panes and visual cont
 
 ## 🛠️ Complete Asset Inventory
 
-The project repository includes a complete catalog of dataset screenshots, step-by-step UI captures, and model audit records:
+The project logo and complete folder directory cataloging step-by-step UI captures and model audit records:
 
-![Complete Project Asset Directory](images_charting/image_f29f2b.jpg)
+![Footprint Sports Logo](images_charting/My_footprint_sports_logo.png)
 
 ---
 
