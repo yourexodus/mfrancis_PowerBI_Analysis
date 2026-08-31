@@ -1,4 +1,4 @@
-# 📊 2023 Employment Analytics Dashboard (Power BI)
+# 📊 Sales Analytics Dashboard (Power BI)
 
 > **An end-to-end Power BI project demonstrating data modeling, DAX problem-solving, and executive-ready data storytelling.**
 
@@ -90,13 +90,7 @@ The helper column was used with **Sort by Column** and then hidden for a clean d
 ![Move Category Canvas](images_visuals/MoveProductCateogrySubCatgoryCanvas.jpg)
 
 ---
-
-### Waterfall Chart Development
-![Waterfall Initial](images_visuals/waterfall.jpg)
-![Corrected Waterfall](images_visuals/correctedWaterfall.jpg)
-![Format Data Label](images_visuals/FormatDataLableWaterfall.jpg)
-
----
+ 
 
 ### Final Visuals & Polish
 ![Updated Title](images_visuals/UpdateTitle.jpg)
